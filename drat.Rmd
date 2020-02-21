@@ -46,17 +46,13 @@ source("markdown/includeRmd.r")
 <div class="content-1">
 
 ## Drat repository
-This is a drat repository for packages we don't want or can't put on CRAN
-(e.g. large data packages).
+This is a drat repository for data packages unsuitable for the CRAN
 
-Now available:
+* `HumanGeneticMap`. Install with `install.packages("HumanGeneticMap", repos="https://genostats.github.io/R/")`.
 
-* data package `HumanGeneticMap`. Install with `install.packages("HumanGeneticMap",
-  repos="https://genostats.github.io/R/")`.
+* `HGDP.CEPH`. Install with `install.packages("HGDP.CEPH", repos="https://genostats.github.io/R/")`.
 
-* data package `HGDP.CEPH`. Install with `install.packages("HGDP.CEPH", 
-  repos="https://genostats.github.io/R/")`.
-
+* `GridData`. Install with `install.packages("GridData", repos="https://genostats.github.io/R/")`.
 
 </div>
 
