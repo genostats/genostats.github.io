@@ -1,0 +1,91 @@
+---
+output:
+  html_document:
+    css: css/style.css
+---
+
+<style type="text/css">
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+</style>
+
+```{r include = FALSE}
+source("markdown/includeRd.r")
+source("markdown/includeRmd.r")
+```
+
+<div class = "container">
+<div class="tabs">
+  <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
+  <label for="tab-1" class="tab-label-1">Genostats</label>
+
+  <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
+  <label for="tab-2" class="tab-label-2">Hervé Perdry</label>
+
+<!--
+<input id="tab-3" type="radio" name="radio-set" class="tab-selector-3" />
+<label for="tab-3" class="tab-label-3">References</label>
+
+<input id="tab-4" type="radio" name="radio-set" class="tab-selector-4" />
+<label for="tab-4" class="tab-label-4">Contact us</label>
+-->       
+
+<div class="clear-shadow"></div>
+			
+
+<!--
+<div class="side-content">
+
+<div class="side-content-1">
+<ul>
+<li> Blah </li>
+<li> Blah Blah Blah Blah </li>
+<li> Bluh Bluh Bluh Bluh </li>
+</ul>
+</div>
+
+</div>
+-->
+
+<div class="content">
+<div class="content-1">
+
+## Genostats
+
+We develop software (R packages) and methods for genetic data analysis.
+
+* Gaston is an R package for Genetic data analysis : data manipulation (quality control), computation of GRM, heritability estimates, association testing.
+
+* Fantasio is an R package for homozygosity mapping with dense SNP data (beta version)
+
+* Ravages is an R package for the analysis of rare variants (beta version)
+
+
+<span style = "color:red; font-size:100%"> This site is under construction </span>
+
+</div>
+
+<div class="content-2">
+## Hervé Perdry
+
+```{r echo = FALSE, results = "asis"}
+includeRmd("herve.perdry.Rmd", strip.level = 1, level.shift = 2)
+```
+</div>
+
+<!--
+<div class="content-3">
+           <p>Some content</p>
+</div>
+
+<div class="content-4">
+           <p>Some content</p>
+</div>
+-->
+</div>
+
+</div>
+</div>

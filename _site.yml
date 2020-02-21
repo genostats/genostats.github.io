@@ -1,0 +1,16 @@
+name: "Genostats"
+output_dir: "."
+navbar:
+  title: "Genostats"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Gaston"
+      href: gaston.html
+    - text: "R repository"
+      href: drat.html
+output:
+   html_document:
+     toc: false
+     highlight: textmate
+
