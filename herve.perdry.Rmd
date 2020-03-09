@@ -34,10 +34,6 @@ E-mail : [prenom].[nom]@u-psud.fr
 
 * [Introduction à la Génétique Quantitative](herve.perdry/intro_genet_q.pdf) (diapos)
 
-### Cours d'École Doctorale
-
-* [Introduction à Rcpp](herve.perdry/intro_cpp.html)
-
 ### DFGSM 3
 
 * [Introduction à l'épidémiologie génétique](herve.perdry/slides-intro-genepi-2019.pdf) 
