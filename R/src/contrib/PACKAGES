@@ -18,6 +18,13 @@ License: GPL-3
 MD5sum: 73e35d19ecbcb1a866bcb61ebe256c07
 NeedsCompilation: no
 
+Package: M1SP
+Version: 0.1
+Depends: R (>= 3.5.0)
+License: GPL
+MD5sum: 7b5d01f5bd568e70b51a9ec04ef955e5
+NeedsCompilation: no
+
 Package: Metropolis
 Version: 0.1.0
 License: GPL-3
