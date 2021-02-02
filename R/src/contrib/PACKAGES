@@ -19,10 +19,10 @@ MD5sum: 73e35d19ecbcb1a866bcb61ebe256c07
 NeedsCompilation: no
 
 Package: M1SP
-Version: 0.2
+Version: 0.3
 Depends: R (>= 3.5.0)
 License: GPL
-MD5sum: 14116e5278cc718923195c8391d52445
+MD5sum: 2a34412c170a786189c2187657708a96
 NeedsCompilation: no
 
 Package: Metropolis
