@@ -1,0 +1,40 @@
+Package: GridData
+Version: 0.1
+Depends: R (>= 3.5.0), gaston
+MD5sum: eb737cb00be1ba9eb40ddf095b6323fd
+NeedsCompilation: no
+
+Package: HGDP.CEPH
+Version: 0.1
+Depends: R (>= 2.10), gaston
+MD5sum: 532d8be9fde3e2925434c67f97ba87c7
+NeedsCompilation: no
+
+Package: HumanGeneticMap
+Version: 0.1
+Depends: R (>= 2.10)
+Suggests: gaston
+License: GPL-3
+MD5sum: 73e35d19ecbcb1a866bcb61ebe256c07
+NeedsCompilation: no
+
+Package: KGH
+Version: 0.1
+Depends: R (>= 3.5.0)
+Suggests: gaston
+License: GPL-3
+MD5sum: 6c51fc843007222d5aea5dc14cfbb577
+NeedsCompilation: no
+
+Package: M1SP
+Version: 0.6
+Depends: R (>= 3.5.0)
+License: GPL
+MD5sum: 359d2405255bcf7d1d301a4e3fefeef9
+NeedsCompilation: no
+
+Package: Metropolis
+Version: 0.1.0
+License: GPL-3
+MD5sum: c3917547248dfefd8e7ab10661a25f29
+NeedsCompilation: no

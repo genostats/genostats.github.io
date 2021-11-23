@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Genostats</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="gaston.html">Gaston</a>
+</li>
+<li>
+  <a href="drat.html">R repository</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div class="container">
+<div class="tabs">
+<input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" /> <label for="tab-1" class="tab-label-1">Gaston</label>
+<input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" /> <label for="tab-2" class="tab-label-2">Manual</label>
+<input id="tab-3" type="radio" name="radio-set" class="tab-selector-3" /> <label for="tab-3" class="tab-label-3">Vignette</label>
+<!--
+<input id="tab-4" type="radio" name="radio-set" class="tab-selector-4" />
+<label for="tab-4" class="tab-label-4">Contact us</label>
+-->
+<div class="clear-shadow">
+
+</div>
+<!--
+<div class="side-content">
+
+<div class="side-content-1">
+<ul>
+<li> Blah </li>
+<li> Blah Blah Blah Blah </li>
+<li> Bluh Bluh Bluh Bluh </li>
+</ul>
+</div>
+
+</div>
+-->
+<div class="content">
+<div class="content-1">
+<h2 id="gaston">Gaston</h2>
+<p>Gaston is an R package for Genetic data analysis : data manipulation (quality control), computation of GRM, heritability estimates, association testing.</p>
+<p><a href="https://cran.r-project.org/package=gaston">Gaston on CRAN</a></p>
+<p><a href="https://github.com/genostats/gaston/">Gaston on github</a></p>
+</div>
+<div class="content-2">
+<h2 id="manual">Manual</h2>
+<p><span style="color:red; font-size:150%"> THIS SITE IS UNDER CONSTRUCTION </span></p>
+<h3 id="reading-and-writing-data">Reading and writing data</h3>
+<h3 id="data-manipulation">Data manipulation</h3>
+<h3 id="mixed-models">Mixed models</h3>
+<h3 id="association-testing">Association testing</h3>
+<h3 id="data-sets">Data sets</h3>
+<h3 id="AGT">
+<code>AGT</code>: AGT data set
+</h3>
+<h4>
+Description
+</h4>
+<p>
+These data have been extracted from the 1000 Genomes data. The data set contains the genotype matrix <code>AGT.gen</code>, the pedigree matrix <code>AGT.fam</code> and a matrix <code>AGT.bim</code>, corresponding to 503 individuals of European populations and 361 SNPs on chromosome 1, on a ~100kb segment containing the Angiotensinogen gene. There is also a factor <code>AGT.pop</code>, which gives the population from which each individual is drawn (CEU = Utah residents of Northern Western European ancestry, FIN = Finnish, GBR = England and Scottland, IBS = Iberian, TSI = Toscani).
+</p>
+<h4>
+Usage
+</h4>
+<pre> data(AGT) </pre>
+<h4>
+Format
+</h4>
+<p>
+There are three data objects in the dataset:
+</p>
+<dl>
+<dt>
+<code>AGT.gen</code>
+</dt>
+<dd>
+<p>
+Genotype matrix
+</p>
+</dd>
+<dt>
+<code>AGT.fam</code>
+</dt>
+<dd>
+<p>
+Data frame containing all variables corresponding to a <code>.fam</code> file
+</p>
+</dd>
+<dt>
+<code>AGT.bim</code>
+</dt>
+<dd>
+<p>
+Data frame containing all variables corresponding to a <code>.bim</code> file
+</p>
+</dd>
+<dt>
+<code>AGT.pop</code>
+</dt>
+<dd>
+<p>
+Factor giving the population from which each individual is drawn
+</p>
+</dd>
+</dl>
+<h4>
+Source
+</h4>
+<p>
+The data were obtained from the 1000 Genomes project (see <a href="https://www.internationalgenome.org/">https://www.internationalgenome.org/</a>).
+</p>
+<h4>
+References
+</h4>
+<p>
+McVean et al, 2012, <em>An integrated map of genetic variation from 1,092 human genomes</em>, Nature <b>491, 56-65</b> <a href="doi:10.1038/nature11632" class="uri">doi:10.1038/nature11632</a>
+</p>
+<h4>
+Examples
+</h4>
+<pre>
+data(AGT)
+x &lt;- as.bed.matrix(AGT.gen, AGT.fam, AGT.bim)
+x
+</pre>
+<h3 id="LCT">
+<code>LCT</code>: LCT data set
+</h3>
+<h4>
+Description
+</h4>
+<p>
+These data have been extracted from the 1000 Genomes data. The data set contains the genotype matrix <code>LCT.gen</code>, the pedigree matrix <code>LCT.fam</code> and a matrix <code>LCT.bim</code>, corresponding to 503 individuals of European populations and 607 SNPs on chromosome 2, on a ~300kb segment containing the Lactase gene. There is also a factor <code>LCT.pop</code>, which gives the population from which each individual is drawn (CEU = Utah residents of Northern Western European ancestry, FIN = Finnish, GBR = England and Scottland, IBS = Iberian, TSI = Toscani).
+</p>
+<p>
+Note that the SNP rs4988235 is associated with lactase persistence / lactose intolerence.
+</p>
+<h4>
+Usage
+</h4>
+<pre> data(LCT) </pre>
+<h4>
+Format
+</h4>
+<p>
+There are three data objects in the dataset:
+</p>
+<dl>
+<dt>
+<code>LCT.gen</code>
+</dt>
+<dd>
+<p>
+Genotype matrix
+</p>
+</dd>
+<dt>
+<code>LCT.fam</code>
+</dt>
+<dd>
+<p>
+Data frame containing all variables corresponding to a <code>.fam</code> file
+</p>
+</dd>
+<dt>
+<code>LCT.bim</code>
+</dt>
+<dd>
+<p>
+Data frame containing all variables corresponding to a <code>.bim</code> file
+</p>
+</dd>
+<dt>
+<code>LCT.pop</code>
+</dt>
+<dd>
+<p>
+Factor giving the population from which each individual is drawn
+</p>
+</dd>
+</dl>
+<h4>
+Source
+</h4>
+<p>
+The data were obtained from the 1000 Genomes project (see <a href="https://www.internationalgenome.org/">https://www.internationalgenome.org/</a>).
+</p>
+<h4>
+References
+</h4>
+<p>
+McVean et al, 2012, <em>An integrated map of genetic variation from 1,092 human genomes</em>, Nature <b>491, 56-65</b> <a href="doi:10.1038/nature11632" class="uri">doi:10.1038/nature11632</a>
+</p>
+<h4>
+Examples
+</h4>
+<pre>
+data(LCT)
+x &lt;- as.bed.matrix(LCT.gen, LCT.fam, LCT.bim)
+x
+which(x@snps$id == "rs4988235")
+</pre>
+</div>
+<div class="content-3">
+<h2 id="vignette">Vignette</h2>
+<p><span style="color:red; font-size:150%"> THIS SITE IS UNDER CONSTRUCTION </span></p>
+</div>
+<!--
+
+<div class="content-4">
+           <p>Some content</p>
+</div>
+-->
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

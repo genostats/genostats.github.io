@@ -1,0 +1,99 @@
+---
+output:
+  html_document:
+    css: css/style.css
+---
+
+```{r include = FALSE}
+source("markdown/includeRd.r")
+source("markdown/includeRmd.r")
+```
+
+<div class = "container">
+<div class="tabs">
+  <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
+  <label for="tab-1" class="tab-label-1">Gaston</label>
+
+  <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
+  <label for="tab-2" class="tab-label-2">Manual</label>
+
+  <input id="tab-3" type="radio" name="radio-set" class="tab-selector-3" />
+  <label for="tab-3" class="tab-label-3">Vignette</label>
+
+<!--
+<input id="tab-4" type="radio" name="radio-set" class="tab-selector-4" />
+<label for="tab-4" class="tab-label-4">Contact us</label>
+-->       
+
+<div class="clear-shadow"></div>
+			
+
+<!--
+<div class="side-content">
+
+<div class="side-content-1">
+<ul>
+<li> Blah </li>
+<li> Blah Blah Blah Blah </li>
+<li> Bluh Bluh Bluh Bluh </li>
+</ul>
+</div>
+
+</div>
+-->
+
+<div class="content">
+<div class="content-1">
+## Gaston
+
+Gaston is an R package for Genetic data analysis : 
+data manipulation (quality control), computation of GRM, heritability estimates, association testing.
+
+[Gaston on CRAN](https://cran.r-project.org/package=gaston)
+
+[Gaston on github](https://github.com/genostats/gaston/)
+
+</div>
+
+<div class="content-2">
+## Manual
+
+<span style = "color:red; font-size:150%"> THIS SITE IS UNDER CONSTRUCTION </span>
+
+### Reading and writing data
+
+### Data manipulation
+
+### Mixed models
+
+### Association testing
+
+### Data sets
+
+```{r echo = FALSE, results = "asis"}
+includeRd(c("AGT","LCT"), "/home/rv/GENOSTATS/gaston/man/", sectionLevel = 2)
+```
+
+
+</div>
+
+<div class="content-3">
+
+## Vignette
+
+
+<span style = "color:red; font-size:150%"> THIS SITE IS UNDER CONSTRUCTION </span>
+
+</div>
+<!--
+
+<div class="content-4">
+           <p>Some content</p>
+</div>
+-->
+</div>
+
+</div>
+</div>
+
+

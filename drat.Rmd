@@ -1,0 +1,73 @@
+---
+output:
+  html_document:
+    css: css/style.css
+---
+
+```{r include = FALSE}
+source("markdown/includeRd.r")
+source("markdown/includeRmd.r")
+```
+
+<div class = "container">
+<div class="tabs">
+  <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
+  <label for="tab-1" class="tab-label-1">Drat</label>
+
+<!--
+  <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
+  <label for="tab-2" class="tab-label-2">Hervé Perdry</label>
+
+<input id="tab-3" type="radio" name="radio-set" class="tab-selector-3" />
+<label for="tab-3" class="tab-label-3">References</label>
+
+<input id="tab-4" type="radio" name="radio-set" class="tab-selector-4" />
+<label for="tab-4" class="tab-label-4">Contact us</label>
+-->       
+
+<div class="clear-shadow"></div>
+			
+
+<!--
+<div class="side-content">
+
+<div class="side-content-1">
+<ul>
+<li> Blah </li>
+<li> Blah Blah Blah Blah </li>
+<li> Bluh Bluh Bluh Bluh </li>
+</ul>
+</div>
+
+</div>
+-->
+
+<div class="content">
+<div class="content-1">
+
+## Drat repository
+This is a drat repository for data packages unsuitable for the CRAN
+
+* `HumanGeneticMap`. Install with `install.packages("HumanGeneticMap", repos="https://genostats.github.io/R/")`.
+
+* `HGDP.CEPH`. Install with `install.packages("HGDP.CEPH", repos="https://genostats.github.io/R/")`.
+
+* `GridData`. Install with `install.packages("GridData", repos="https://genostats.github.io/R/")`.
+
+</div>
+
+<!--
+<div class="content-2">
+</div>
+
+<div class="content-3">
+</div>
+
+<div class="content-4">
+</div>
+-->
+</div>
+
+</div>
+</div>
+

@@ -1,0 +1,61 @@
+# Hervé Perdry 
+
+Je suis maître de conférences à l'Université Paris-Sud (UFR de Médecine & Inserm CESP).
+Après m'être longtemps consacré à l'algèbre constructive, je 
+me suis converti en 2006 à l'analyse de données génétiques. 
+J'ai enseigné en PACES, en L1 et L3 biologie, et j'enseigne actuellement 
+dans le
+[Master de Santé Publique de l'Université Paris-Sud](https://www.universite-paris-saclay.fr/fr/formation/master/sante-publique#mention).
+
+[CV au format pdf](herve.perdry/cv-2019.pdf)
+
+E-mail : [prenom].[nom]@u-psud.fr
+
+
+## Documents de cours
+
+### M1 de Santé Publique
+
+* [Modélisation (poly)](herve.perdry/modelisation.pdf) 
+
+* [Modélisation (diapos)](herve.perdry/support_modelisation.pdf)
+
+### M2 Génétique et Biomarqueurs
+
+* [Statistiques](herve.perdry/stats_geb.pdf)
+
+* [Génétique des populations](herve.perdry/gen_pop.pdf)
+
+* [Logiciel R](herve.perdry/cours_R.pdf)
+
+* [Stratification de population dans les études d'association](herve.perdry/pop_stratification_ACP.pdf) (diapos)
+
+* [Analyses de liaison](herve.perdry/liaison.pdf)
+
+* [Introduction à la Génétique Quantitative](herve.perdry/intro_genet_q.pdf) (diapos)
+
+### DFGSM 3
+
+* [Introduction à l'épidémiologie génétique](herve.perdry/slides-intro-genepi-2019.pdf) 
+
+### L3 & Magistère de biologie
+
+* [Temps discret, temps continu](herve.perdry/temps_discret_temps_continu.pdf) (version de 2014)
+
+## Publications
+
+### Mémoires
+
+* [Héritabilité, de la régression vers la moyenne au modèle mixte](herve.perdry/HDR.pdf) (HDR, 2017)
+
+* [Aspects constructifs de la théorie des corps valués](herve.perdry/these.pdf) (thèse, 2001)
+
+### Articles sélectionnés (génétique)
+
+[Liste complète sur ORCID](https://orcid.org/0000-0001-7570-1678)
+
+<span style = "color:red; font-size:100%">Cette page est en construction...
+Les articles viendront!</span>
+
+### Articles sélectionnés (mathématiques)
+
